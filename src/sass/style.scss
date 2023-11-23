@@ -1,7 +1,150 @@
 @import "utils/variables.scss";
 
+// Base styles
 body {
     font-family: $font-text;
-    max-width: $max-width;
     margin: auto;
+    text-align: center;
 }
+
+#root {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+//header
+.header {
+    
+    color: white;
+    box-shadow: $shadow;
+    background-color: rgba(90, 111, 8, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    img {
+        width: 100px;
+    }
+
+    a {
+        color: white;
+        padding-right: 30px;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &-logo {
+        display: flex; 
+        align-items: center;
+        gap: 30px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+}
+
+main {
+    background-color: rgba(90, 111, 8, 0.1);
+    flex: 1;
+
+    h1 {
+color: $color-secondary;
+        margin: 0;
+        padding: 3rem;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+form label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 150px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+fieldset {
+ 
+    margin: 0;
+}
+
+.form-group {
+    display: flex;
+   
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+
+    &-label {
+        flex: 1;
+        display: flex;
+       text-align: left;
+       padding: 20px 50px;
+      
+       
+    }
+  }
+  .form-group-label > *:first-child {
+    flex: 1; 
+}
+
+.form-group-label > *:last-child {
+    flex: 2; 
+}
+
+.address {
+    display: flex;
+    flex-direction: column;
+
+    &-group {
+        display: flex;
+       text-align: left; 
+    }
+}
+
+.address-group > *:first-child {
+    flex: 1; 
+}
+
+.address-group > *:last-child {
+    flex: 2; 
+}
+  
+.save {
+    display: block;
+    width: 100px;
+    padding: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    border-color: $color-primary;
+    background-color: $color-secondary;
+    color: #fff;
+  }
