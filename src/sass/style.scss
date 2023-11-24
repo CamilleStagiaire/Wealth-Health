@@ -4,7 +4,6 @@
 body {
     font-family: $font-text;
     margin: auto;
-    text-align: center;
 }
 
 #root {
@@ -15,13 +14,13 @@ body {
 
 //header
 .header {
-    
     color: white;
     box-shadow: $shadow;
     background-color: rgba(90, 111, 8, 0.9);
     display: flex;
     align-items: center;
-    justify-content: space-between;  
+    justify-content: space-between;
+
     img {
         width: 100px;
     }
@@ -37,12 +36,12 @@ body {
     }
 
     &-logo {
-        display: flex; 
+        display: flex;
         align-items: center;
         gap: 30px;
     }
 
-    h1 {
+    h2 {
         font-size: 40px;
     }
 }
@@ -52,7 +51,7 @@ main {
     flex: 1;
 
     h1 {
-color: $color-secondary;
+        color: $color-secondary;
         margin: 0;
         padding: 3rem;
     }
@@ -66,57 +65,60 @@ color: $color-secondary;
 }
 
 form {
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 70%;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    padding: 20px; 
 }
 
 form label {
     text-align: left;
-    margin-bottom: 5px;
+    margin: 5px;
 }
 
-input,
-select {
-    width: 150px;
-    padding: 8px;
-    margin-bottom: 10px;
+input, select {
+   // width: 150px;
+    padding: 10px;
+    margin: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
 fieldset {
- 
+    border-color: $color-secondary;
     margin: 0;
+    padding: 0;
 }
 
 .form-group {
     display: flex;
-   
     align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+    gap: 20px;
 
     &-label {
         flex: 1;
         display: flex;
-       text-align: left;
-       padding: 20px 50px;
-      
-       
+        //text-align: left;
+        align-items: center;
+       // padding: 10px 50px;
+
+       select {
+        margin-left: 0;
+       }
     }
-  }
-  .form-group-label > *:first-child {
-    flex: 1; 
 }
 
-.form-group-label > *:last-child {
-    flex: 2; 
+.form-group-label>*:first-child, .address-group>*:first-child {
+    flex: 1;
+}
+
+.form-group-label>*:last-child, .address-group>*:last-child {
+    flex: 2;
 }
 
 .address {
@@ -125,18 +127,19 @@ fieldset {
 
     &-group {
         display: flex;
-       text-align: left; 
+        //text-align: left;
+        align-items: center;
+    }
+
+    &-fields {
+        width: 100%;
+    }
+
+    input {
+        margin-left: 0;
     }
 }
 
-.address-group > *:first-child {
-    flex: 1; 
-}
-
-.address-group > *:last-child {
-    flex: 2; 
-}
-  
 .save {
     display: block;
     width: 100px;
@@ -147,4 +150,4 @@ fieldset {
     border-color: $color-primary;
     background-color: $color-secondary;
     color: #fff;
-  }
+}

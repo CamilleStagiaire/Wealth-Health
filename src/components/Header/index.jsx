@@ -6,7 +6,7 @@ const Header = () => {
     <header className="header">
       <div className="header-logo">
         <img src={logo} alt="Logo Wealth-Health" />
-        <h1>HRNet</h1>
+        <h2>HRNet</h2>
       </div>
       <nav className="header-menu">
         <Link to="/" aria-label="Accéder à la page d'accueil">
